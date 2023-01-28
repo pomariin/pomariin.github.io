@@ -1,0 +1,75 @@
+:root {
+    --bs-link-color: #62ff00;
+    --bs-link-color-rgb: 98, 255, 0;
+    --bs-link-hover-color: #fff;
+    --bs-link-hover-color-rgb: 255, 255, 255;
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: right;
+    }
+    to {
+        background-position: left;
+    }
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+p strong, h2 {
+    font-weight: 600;
+}
+
+address {
+    margin: 0;
+}
+
+.c-bg {
+    background-attachment: fixed;
+    background-image: radial-gradient(circle at 300px -50px, #227799, #4444bb, #8844bb);
+    background-size: 120%;
+    animation: moveBackground ease-in-out infinite alternate 20s; 
+}
+
+.c-btn {
+    transform: translateX(calc(100% - 1.5rem));
+    transition: transform ease 0.3s;
+    border-radius: 0;
+    font-weight: 500;
+    --bs-btn-color: #62ff00;
+}
+
+.c-btn:hover {
+    transform: translateX(0%);
+}
+
+.c-hero {
+    object-fit: cover;
+    min-width: 270px;
+}
+
+.img-pixel {
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: pixelated;
+}
+
+.img-julius {
+    width: 261px;
+}
+
+.icon {
+    width: 96px;
+}
+
+@media (max-width: 400px) {
+    .img-julius {
+        width: 174px;
+    }
+}
